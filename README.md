@@ -1,6 +1,6 @@
 # Swift-Language
 
-Learning Swift programming language with coding 👨‍💻
+Code and learn fast 👨‍💻
 
 ## Fundamentals
 
