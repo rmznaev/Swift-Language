@@ -8,3 +8,4 @@ Learning Swift programming language with coding 👨‍💻
 * Type Casting ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Type%20Casting.xcplaygroundpage/Contents.swift))
 * Generics ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Generics.xcplaygroundpage/Contents.swift))
 * Subscripts ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Subscripts.xcplaygroundpage/Contents.swift))
+* Class & Struct ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Class%20vs%20Struct.xcplaygroundpage/Contents.swift))
