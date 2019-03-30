@@ -6,5 +6,7 @@
         <page name='Error Handling'/>
         <page name='Type Casting'/>
         <page name='Generics'/>
+        <page name='Subscripts'/>
+        <page name='Class vs Struct'/>
     </pages>
 </playground>
