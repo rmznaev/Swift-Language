@@ -11,3 +11,4 @@ Code and learn fast 👨‍💻
 * Generics ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Generics.xcplaygroundpage/Contents.swift))
 * Subscripts ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Subscripts.xcplaygroundpage/Contents.swift))
 * Class & Struct ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Class%20vs%20Struct.xcplaygroundpage/Contents.swift))
+* Set & Tuple ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Set%20%26%20Tuple.xcplaygroundpage/Contents.swift))
