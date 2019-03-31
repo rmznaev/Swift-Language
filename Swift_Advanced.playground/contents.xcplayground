@@ -8,5 +8,6 @@
         <page name='Generics'/>
         <page name='Subscripts'/>
         <page name='Class vs Struct'/>
+        <page name='Set &amp; Tuple'/>
     </pages>
 </playground>
