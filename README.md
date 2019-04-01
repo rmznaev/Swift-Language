@@ -15,3 +15,7 @@ Code and learn fast 👨‍💻
 * Extension ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Extension.xcplaygroundpage/Contents.swift))
 * Operators ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Operators.xcplaygroundpage/Contents.swift))
 * Typealias ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Typealias.xcplaygroundpage/Contents.swift))
+
+## Object Oriented Programming (OOP)
+
+* Convenience Init ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Convenience%20Init%20(OOP).xcplaygroundpage/Contents.swift))
