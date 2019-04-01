@@ -21,3 +21,4 @@ Code and learn fast 👨‍💻
 ## Object Oriented Programming (OOP)
 
 * Convenience Init ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Convenience%20Init%20(OOP).xcplaygroundpage/Contents.swift))
+* Computed Property ([code here]())
