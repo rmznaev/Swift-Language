@@ -14,3 +14,4 @@ Code and learn fast 👨‍💻
 * Set & Tuple ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Set%20%26%20Tuple.xcplaygroundpage/Contents.swift))
 * Extension ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Extension.xcplaygroundpage/Contents.swift))
 * Operators ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Operators.xcplaygroundpage/Contents.swift))
+* Typealias ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Typealias.xcplaygroundpage/Contents.swift))
