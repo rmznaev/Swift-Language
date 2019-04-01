@@ -11,5 +11,6 @@
         <page name='Set &amp; Tuple'/>
         <page name='Extension'/>
         <page name='Operators'/>
+        <page name='Typealias'/>
     </pages>
 </playground>
