@@ -13,5 +13,6 @@
         <page name='Operators'/>
         <page name='Typealias'/>
         <page name='Convenience Init (OOP)'/>
+        <page name='Computed Property (OOP)'/>
     </pages>
 </playground>
