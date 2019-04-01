@@ -12,5 +12,6 @@
         <page name='Extension'/>
         <page name='Operators'/>
         <page name='Typealias'/>
+        <page name='Convenience Init (OOP)'/>
     </pages>
 </playground>
