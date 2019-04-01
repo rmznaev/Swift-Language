@@ -2,6 +2,8 @@
 
 Code and learn fast 👨‍💻
 
+![](Swift_Cover_Photo.jpeg)
+
 ## Fundamentals
 
 * Optional Chaining ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Optional%20Chaining.xcplaygroundpage/Contents.swift))
