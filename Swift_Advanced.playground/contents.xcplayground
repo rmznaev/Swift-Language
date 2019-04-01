@@ -10,5 +10,6 @@
         <page name='Class vs Struct'/>
         <page name='Set &amp; Tuple'/>
         <page name='Extension'/>
+        <page name='Operators'/>
     </pages>
 </playground>
