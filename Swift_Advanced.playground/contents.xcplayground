@@ -9,5 +9,6 @@
         <page name='Subscripts'/>
         <page name='Class vs Struct'/>
         <page name='Set &amp; Tuple'/>
+        <page name='Extension'/>
     </pages>
 </playground>
