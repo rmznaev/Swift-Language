@@ -24,3 +24,4 @@ Code and learn fast 👨‍💻
 * Computed Property ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Computed%20Property%20(OOP).xcplaygroundpage/Contents.swift))
 * Property Observer ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Property%20Observer%20(OOP).xcplaygroundpage/Contents.swift))
 * Failable Init ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Failable%20Int.xcplaygroundpage/Contents.swift))
+* Override Method ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Override%20Method%20(OOP).xcplaygroundpage/Contents.swift))
