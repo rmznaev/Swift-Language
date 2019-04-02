@@ -16,5 +16,6 @@
         <page name='Computed Property (OOP)'/>
         <page name='Property Observer (OOP)'/>
         <page name='Failable Int'/>
+        <page name='Override Method'/>
     </pages>
 </playground>
