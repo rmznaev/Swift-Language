@@ -15,7 +15,8 @@
         <page name='Convenience Init (OOP)'/>
         <page name='Computed Property (OOP)'/>
         <page name='Property Observer (OOP)'/>
-        <page name='Failable Int'/>
-        <page name='Override Method'/>
+        <page name='Failable Int (OOP)'/>
+        <page name='Override Method (OOP)'/>
+        <page name='Two Phase Init (OOP)'/>
     </pages>
 </playground>
