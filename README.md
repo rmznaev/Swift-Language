@@ -26,3 +26,5 @@ Code and learn fast 👨‍💻
 * Failable Init ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Failable%20Int.xcplaygroundpage/Contents.swift))
 * Override Method ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Override%20Method%20(OOP).xcplaygroundpage/Contents.swift))
 * Two Phase Init ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Two%20Phase%20Init%20(OOP).xcplaygroundpage/Contents.swift))
+* Type Property & Method ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Type%20Property%20%26%20Method%20(OOP).xcplaygroundpage/Contents.swift))
+* Singleton Pattern ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Singleton%20Pattern%20(OOP).xcplaygroundpage/Contents.swift))
