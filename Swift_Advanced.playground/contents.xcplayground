@@ -14,5 +14,6 @@
         <page name='Typealias'/>
         <page name='Convenience Init (OOP)'/>
         <page name='Computed Property (OOP)'/>
+        <page name='Property Observer (OOP)'/>
     </pages>
 </playground>
