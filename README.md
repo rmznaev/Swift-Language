@@ -23,3 +23,4 @@ Code and learn fast 👨‍💻
 * Convenience Init ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Convenience%20Init%20(OOP).xcplaygroundpage/Contents.swift))
 * Computed Property ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Computed%20Property%20(OOP).xcplaygroundpage/Contents.swift))
 * Property Observer ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Property%20Observer%20(OOP).xcplaygroundpage/Contents.swift))
+* Failable Init ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Failable%20Int.xcplaygroundpage/Contents.swift))
