@@ -15,5 +15,6 @@
         <page name='Convenience Init (OOP)'/>
         <page name='Computed Property (OOP)'/>
         <page name='Property Observer (OOP)'/>
+        <page name='Failable Int'/>
     </pages>
 </playground>
