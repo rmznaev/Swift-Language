@@ -20,5 +20,7 @@
         <page name='Two Phase Init (OOP)'/>
         <page name='Type Property &amp; Method (OOP)'/>
         <page name='Singleton Pattern (OOP)'/>
+        <page name='Intro to Closures Part I'/>
+        <page name='Intro to Closures Part II'/>
     </pages>
 </playground>
