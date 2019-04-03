@@ -6,7 +6,7 @@ class AccountManager {
     
     static let sharedInstance = AccountManager()
     
-    var userInfo = (ID: "bobthedev", Password: 01036343984)
+    var userInfo = (ID: "rmznaze", Password: 994558310788)
     
     // Networking: communicating server
     func network() {
@@ -20,16 +20,16 @@ class AccountManager {
 }
 
 AccountManager.sharedInstance.userInfo
-// (ID "bobthedev", Password 01036343984)
+// (ID "rmznaze", Password 994558310788)
 
 // ViewController One
-AccountManager.sharedInstance.userInfo.ID // "bobthedev"
+AccountManager.sharedInstance.userInfo.ID // "rmznaze"
 
 // ViewController Two
-AccountManager.sharedInstance.userInfo.ID = "bobleesj"
+AccountManager.sharedInstance.userInfo.ID = "rmznift"
 
 // ViewController Three
-AccountManager.sharedInstance.userInfo.ID // "bobleesj"
+AccountManager.sharedInstance.userInfo.ID // "rmznift"
 
 
 
