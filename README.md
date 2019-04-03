@@ -28,3 +28,8 @@ Code and learn fast 👨‍💻
 * Two Phase Init ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Two%20Phase%20Init%20(OOP).xcplaygroundpage/Contents.swift))
 * Type Property & Method ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Type%20Property%20%26%20Method%20(OOP).xcplaygroundpage/Contents.swift))
 * Singleton Pattern ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Singleton%20Pattern%20(OOP).xcplaygroundpage/Contents.swift))
+
+## Functional Swift ⚙️
+
+* Intro to Closures Part I ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Intro%20to%20Closures%20Part%20I.xcplaygroundpage/Contents.swift))
+* Intro to Closures Part II ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Intro%20to%20Closures%20Part%20II.xcplaygroundpage/Contents.swift))
