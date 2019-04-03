@@ -22,5 +22,9 @@
         <page name='Singleton Pattern (OOP)'/>
         <page name='Intro to Closures Part I'/>
         <page name='Intro to Closures Part II'/>
+        <page name='Lazy Init with Closures'/>
+        <page name='Capture Lists'/>
+        <page name='Trailing Closures'/>
+        <page name='Completion Handlers'/>
     </pages>
 </playground>
