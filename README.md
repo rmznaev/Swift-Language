@@ -33,3 +33,7 @@ Code and learn fast 👨‍💻
 
 * Intro to Closures Part I ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Intro%20to%20Closures%20Part%20I.xcplaygroundpage/Contents.swift))
 * Intro to Closures Part II ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Intro%20to%20Closures%20Part%20II.xcplaygroundpage/Contents.swift))
+* Lazy Init with Closures ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Lazy%20Init%20with%20Closures.xcplaygroundpage/Contents.swift))
+* Capture Lists ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Capture%20Lists.xcplaygroundpage/Contents.swift))
+* Trailing Closures ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Trailing%20Closures.xcplaygroundpage/Contents.swift))
+* Completion Handlers ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Completion%20Handlers.xcplaygroundpage/Contents.swift))
