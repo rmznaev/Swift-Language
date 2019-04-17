@@ -29,5 +29,6 @@
         <page name='Intro to Protocols'/>
         <page name='Protocol Extension'/>
         <page name='Protocol as Type'/>
+        <page name='Delegate Pattern'/>
     </pages>
 </playground>
