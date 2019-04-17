@@ -43,3 +43,4 @@ Code and learn fast 👨‍💻
 * Intro to Protocols ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Intro%20to%20Protocols.xcplaygroundpage/Contents.swift))
 * Protocol Extension ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Protocol%20Extension.xcplaygroundpage/Contents.swift))
 * Protocol as Type ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Protocol%20as%20Type.xcplaygroundpage/Contents.swift))
+* Delegate Pattern ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Delegate%20Pattern.xcplaygroundpage/Contents.swift))
