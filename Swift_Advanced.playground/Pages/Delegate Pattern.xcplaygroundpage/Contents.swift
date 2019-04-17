@@ -49,7 +49,7 @@ firstVC.delegate?.passData(data: "a bunch of contracts")
 
 
 //: Practical Example in iOS
-class BobViewController: UIViewController, UITableViewDelegate {
+class RmznViewController: UIViewController, UITableViewDelegate {
     
     let tableView = UITableView()
     

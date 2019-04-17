@@ -30,5 +30,6 @@
         <page name='Protocol Extension'/>
         <page name='Protocol as Type'/>
         <page name='Delegate Pattern'/>
+        <page name='Data Source Pattern'/>
     </pages>
 </playground>
