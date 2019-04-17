@@ -37,3 +37,9 @@ Code and learn fast 👨‍💻
 * Capture Lists ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Capture%20Lists.xcplaygroundpage/Contents.swift))
 * Trailing Closures ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Trailing%20Closures.xcplaygroundpage/Contents.swift))
 * Completion Handlers ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Completion%20Handlers.xcplaygroundpage/Contents.swift))
+
+## Protocol Oriented Swift 🔗
+
+* Intro to Protocols ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Intro%20to%20Protocols.xcplaygroundpage/Contents.swift))
+* Protocol Extension ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Protocol%20Extension.xcplaygroundpage/Contents.swift))
+* Protocol as Type ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Protocol%20as%20Type.xcplaygroundpage/Contents.swift))
