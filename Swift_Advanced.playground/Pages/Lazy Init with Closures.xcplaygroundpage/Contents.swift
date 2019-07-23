@@ -40,9 +40,9 @@ func createButton(enterTitle: String) -> UIButton {
     let button = UIButton(frame: buttonSize)
     
     button.backgroundColor = .black
-    
+
     button.titleLabel?.text = enterTitle
-    
+
     return button
     
 }
