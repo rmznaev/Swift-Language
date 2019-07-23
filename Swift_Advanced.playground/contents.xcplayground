@@ -31,5 +31,6 @@
         <page name='Protocol as Type'/>
         <page name='Delegate Pattern'/>
         <page name='Data Source Pattern'/>
+        <page name='Optionals'/>
     </pages>
 </playground>
