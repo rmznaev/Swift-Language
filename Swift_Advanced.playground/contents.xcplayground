@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios'>
     <pages>
+        <page name='Optionals'/>
         <page name='Optional Chaining'/>
         <page name='Guard &amp; Defer Statements'/>
         <page name='Error Handling'/>
@@ -31,6 +32,5 @@
         <page name='Protocol as Type'/>
         <page name='Delegate Pattern'/>
         <page name='Data Source Pattern'/>
-        <page name='Optionals'/>
     </pages>
 </playground>
