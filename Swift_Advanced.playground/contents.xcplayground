@@ -32,5 +32,6 @@
         <page name='Protocol as Type'/>
         <page name='Delegate Pattern'/>
         <page name='Data Source Pattern'/>
+        <page name='OOP in Swift'/>
     </pages>
 </playground>
