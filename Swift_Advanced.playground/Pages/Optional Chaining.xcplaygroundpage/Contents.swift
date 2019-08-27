@@ -37,4 +37,43 @@ if let residentName = nycApartment.human?.name {
     print("No name available!")
 }
 
+
+// Swift Book reference
+
+class Person {
+    
+    var residence: Residence?
+    
+}
+
+class Residence {
+    
+    var numberOfRooms = 4
+    
+}
+
+let asif = Person()
+
+if let roomCount = asif.residence?.numberOfRooms {
+    
+    print("Asif's residence has \(roomCount) room(s).")
+    
+} else {
+    
+    print("Unable to retrieve number of rooms")
+    
+}
+
+asif.residence = Residence()
+
+if let roomCount = asif.residence?.numberOfRooms {
+    
+    print("John's residence has \(roomCount) room(s).")
+    
+} else {
+    
+    print("Unable to retrieve number of rooms")
+    
+}
+
 //: [Next](@next)
