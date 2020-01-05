@@ -3,6 +3,7 @@
     <pages>
         <page name='Basics'/>
         <page name='Collection Types'/>
+        <page name='Closures'/>
         <page name='Optionals'/>
         <page name='Optional Chaining'/>
         <page name='Guard &amp; Defer Statements'/>
