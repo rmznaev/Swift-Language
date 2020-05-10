@@ -4,6 +4,7 @@
         <page name='Basics'/>
         <page name='Strings &amp; Characters'/>
         <page name='Collection Types'/>
+        <page name='Control Flow'/>
         <page name='Closures'/>
         <page name='Enumerations'/>
         <page name='Optionals'/>
