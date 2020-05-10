@@ -19,6 +19,8 @@
         <page name='Extension'/>
         <page name='Operators'/>
         <page name='Typealias'/>
+        <page name='OOP in Swift'/>
+        <page name='Classes (OOP)'/>
         <page name='Convenience Init (OOP)'/>
         <page name='Computed Property (OOP)'/>
         <page name='Property Observer (OOP)'/>
@@ -38,6 +40,5 @@
         <page name='Protocol as Type'/>
         <page name='Delegate Pattern'/>
         <page name='Data Source Pattern'/>
-        <page name='OOP in Swift'/>
     </pages>
 </playground>

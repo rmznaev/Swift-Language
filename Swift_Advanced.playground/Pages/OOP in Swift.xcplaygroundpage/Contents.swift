@@ -153,7 +153,7 @@ class BassGuitar: Guitar {
 
 
 let piano = Piano(brand: "Yamaha", hasPedals: true)
-piano.true()
+//piano.true()
 
 let music = Music(notes: ["C", "G", "F"])
 piano.play(music, usingPedals: false)
