@@ -24,6 +24,7 @@ Code and learn fast 👨‍💻
 ## Object Oriented Programming (OOP) 🛠
 
 * Essentials of OOP ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/OOP%20in%20Swift.xcplaygroundpage/Contents.swift))
+* Principles of OOP ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Classes%20(OOP).xcplaygroundpage/Contents.swift))
 * Enumerations ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Enumerations.xcplaygroundpage/Contents.swift))
 * Convenience Init ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Convenience%20Init%20(OOP).xcplaygroundpage/Contents.swift))
 * Computed Property ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Computed%20Property%20(OOP).xcplaygroundpage/Contents.swift))
