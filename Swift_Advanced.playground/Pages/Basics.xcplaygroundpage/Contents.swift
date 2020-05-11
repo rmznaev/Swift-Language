@@ -87,4 +87,29 @@ let http200Status = (statusCode: 200, description: "OK")
 print("The status code is: \(http200Status.statusCode)")
 print("The status message is: \(http200Status.description)")
 
+
+// Math functions
+sin(45 * Double.pi / 180)
+cos(135 * Double.pi / 180)
+
+(4.0).squareRoot() // 2
+
+max(4, 7)
+min(-5, -10)
+
+// Shift Operations
+
+/// shift left: <<
+/// shift right: >>
+
+1 << 3
+1 << 2
+1 << 4
+
+1 >> 2
+1 >> 1
+1 >> 3
+
+
+
 //: [Next](@next)
