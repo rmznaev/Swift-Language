@@ -21,6 +21,7 @@
         <page name='Typealias'/>
         <page name='OOP in Swift'/>
         <page name='Classes (OOP)'/>
+        <page name='Initialization part one'/>
         <page name='Convenience Init (OOP)'/>
         <page name='Computed Property (OOP)'/>
         <page name='Property Observer (OOP)'/>
