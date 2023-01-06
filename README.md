@@ -4,6 +4,10 @@ Code and learn fast 👨‍💻
 
 ![](Swift_Cover_Photo.jpeg)
 
+## About ℹ️
+
+
+
 ## Fundamentals 🔐
 
 * Basics ([code here](https://github.com/rmznaev/Swift-Language/blob/master/Swift_Advanced.playground/Pages/Basics.xcplaygroundpage/Contents.swift))
