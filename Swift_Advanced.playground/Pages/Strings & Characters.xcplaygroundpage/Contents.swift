@@ -178,4 +178,83 @@ print(stringOne.lowercased())
 stringOne.startIndex
 stringOne.endIndex
 
+
+// - Swift Apprentice Book
+
+let string = "Matt"
+for char in string {
+    print(char)
+}
+
+let stringLength = string.count
+
+//let fourthChar = string[3] // incorrect - cannot able to subscripting directly in Swift
+
+let cafeNormal = "café"
+let cafeCombining = "cafe\u{0301}"
+
+cafeNormal.count     // 4
+cafeCombining.count  // 4
+
+cafeNormal.unicodeScalars.count     // 4
+cafeCombining.unicodeScalars.count  // 5
+
+for codePoint in cafeCombining.unicodeScalars {
+    print(codePoint.value)
+}
+
+// - Indexing Strings
+
+let firstIndex = cafeCombining.startIndex
+let firstChar = cafeCombining[firstIndex]
+
+let lastIndex = cafeCombining.index(before: cafeCombining.endIndex)
+let lastChar = cafeCombining[lastIndex]
+
+let fourthIndex = cafeCombining.index(cafeCombining.startIndex, offsetBy: 3)
+let fourthChar = cafeCombining[fourthIndex]
+
+fourthChar.unicodeScalars.count // 2
+fourthChar.unicodeScalars.forEach { codePoint in
+    print(codePoint.value)
+}
+
+let equal = cafeNormal == cafeCombining
+
+let name = "Matt"
+let backwardsName = name.reversed()
+
+let secondCharIndex = backwardsName.index(backwardsName.startIndex, offsetBy: 1)
+let secondChar = backwardsName[secondCharIndex] // "t"
+
+let backwardsNameString = String(backwardsName)
+
+// Raw strings
+
+let raw1 = #"Raw "No Escaping" \(no interpolation!). Use all the \ you want!"#
+print(raw1)
+
+let raw2 = ##"Aren’t we "# clever"##
+print(raw2)
+
+let can = "can do that too"
+let raw3 = #"Yes we \#(can)!"#
+print(raw3)
+
+let multiRaw = #"""
+  _____         _  __ _
+ / ____|       (_)/ _| |
+| (_____      ___| |_| |_
+ \___ \ \ /\ / / |  _| __|
+ ____) \ V  V /| | | | |_
+|_____/ \_/\_/ |_|_|  \__|
+"""#
+print(multiRaw)
+
+// Substrings
+
+let fullName = "Matt Galloway"
+let spaceIndex = fullName.firstIndex(of: " ")!
+let firstName = fullName[fullName.startIndex..<spaceIndex] // "Matt"
+
 //: [Next](@next)
