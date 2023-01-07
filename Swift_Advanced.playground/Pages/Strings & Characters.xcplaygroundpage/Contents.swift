@@ -4,7 +4,67 @@ import Foundation
 
 // STRINGS & CHARACTERS
 
-// String indices
+// - String literals
+
+let someString = "Some string literal value"
+
+let quotation = """
+The White Rabbit put on his spectacles.  "Where shall I begin,
+please your Majesty?" he asked.
+
+"Begin at the beginning," the King said gravely, "and go on
+till you come to the end; then stop."
+"""
+
+let singleLineString = "These are the same."
+
+let multilineString = """
+These are the same.
+"""
+
+let threeMoreDoubleQuotationMarks = #"""
+Here are three more double quotes: """
+"""#
+
+// - Initializing an Empty String
+
+var emptyString = ""               // empty string literal
+var anotherEmptyString = String()  // initializer syntax
+// these two strings are both empty, and are equivalent to each other
+
+if emptyString.isEmpty {
+    print("Nothing to see here!")
+}
+// Prints "Nothing to see here"
+
+var variableString = "Horse"
+variableString += " and carriage"
+// variableString is now "Horse and carriage"
+
+//let constantString = "Highlander"
+//constantString += " and another Highlander"
+// this reports a compile-time error - a constant string cannot be modified
+
+// - Working with Characters
+
+for character in "Dog!🐶" {
+    print(character)
+}
+
+// You can’t append a String or Character to an existing Character variable, because a Character value must contain a single character only.
+
+// - String Interpolation
+
+let multiplier = 3
+let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
+// message is "3 times 2.5 is 7.5"
+
+// - Accessing and Modifying a String
+// Each String value has an associated index type, String.Index, which corresponds to the position of each Character in the string.
+
+
+
+// - String indices
 
 let greeting = "Guten Tag!"
 
@@ -21,8 +81,6 @@ greeting[index] // a
 for index in greeting.indices {
     print("\(greeting[index]) ", terminator: "")
 }
-
-
 
 // Inserting & Removing
 

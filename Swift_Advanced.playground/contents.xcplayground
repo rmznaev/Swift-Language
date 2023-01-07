@@ -2,6 +2,7 @@
 <playground version='6.0' target-platform='ios'>
     <pages>
         <page name='Basics'/>
+        <page name='Operators'/>
         <page name='Strings &amp; Characters'/>
         <page name='Collection Types'/>
         <page name='Control Flow'/>
@@ -17,12 +18,9 @@
         <page name='Class vs Struct'/>
         <page name='Set &amp; Tuple'/>
         <page name='Extension'/>
-        <page name='Operators'/>
         <page name='Typealias'/>
         <page name='OOP in Swift'/>
         <page name='Classes (OOP)'/>
-        <page name='Initialization part one'/>
-        <page name='Initialization part two'/>
         <page name='Convenience Init (OOP)'/>
         <page name='Computed Property (OOP)'/>
         <page name='Property Observer (OOP)'/>
@@ -42,5 +40,7 @@
         <page name='Protocol as Type'/>
         <page name='Delegate Pattern'/>
         <page name='Data Source Pattern'/>
+        <page name='Initialization Part I'/>
+        <page name='Initialization Part II'/>
     </pages>
 </playground>
