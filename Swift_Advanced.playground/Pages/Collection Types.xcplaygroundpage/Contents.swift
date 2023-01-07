@@ -2,8 +2,18 @@
 
 import Foundation
 
+// - Collection Types
 
-// Arrays
+// Arrays - stores values of the same type in an ordered list. The same value can appear in an array multiple times at different positions.
+
+// Sets - stores distinct values of the same type in a collection with no defined ordering.
+
+// Dictionaries - Unordered collections of key-value associations. Each value is associated with a unique key.
+
+
+
+// - Arrays
+
 var someInts = [Int]()
 print("someInts is of type [Int] with \(someInts.count) items.")
 
@@ -62,7 +72,8 @@ for (index, value) in shoppingList.enumerated() {
 
 
 
-// Sets
+// - Sets
+
 var letters = Set<Character>()
 print("letters is of type Set<Character> with \(letters.count) items.")
 
@@ -112,7 +123,8 @@ for genre in favoriteGenres.sorted() {
 
 
 
-// Dictionaries
+// - Dictionaries
+
 var namesOfIntegers = [Int: String]()
 namesOfIntegers[16] = "Sixteen"
 namesOfIntegers = [:]
