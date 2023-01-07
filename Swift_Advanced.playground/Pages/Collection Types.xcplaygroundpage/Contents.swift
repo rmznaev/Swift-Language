@@ -70,7 +70,29 @@ for (index, value) in shoppingList.enumerated() {
     print("Item \(index + 1): \(value)")
 }
 
+// ------- Swift Apprentice Book
 
+var players = ["Alice", "Bob", "Cindy", "Dan"]
+
+print(players.isEmpty)
+
+var currentPlayer = players.first
+currentPlayer = players.max()
+
+print([2, 3, 1].first as Any) // > Optional(2)
+print([2, 3, 1].min() as Any) // > Optional(1)
+
+var firstPlayer = players[0]
+print("First player is \(firstPlayer)")
+
+let upcomingPlayersSlice = players[1...2]
+print(upcomingPlayersSlice[1], upcomingPlayersSlice[2])
+
+players[1...3].contains("Bob") // true
+
+for (index, player) in players.enumerated() {
+    print("\(index+1) -> \(player)")
+}
 
 // - Sets
 
@@ -120,6 +142,28 @@ for genre in favoriteGenres {
 for genre in favoriteGenres.sorted() {
     print(genre)
 }
+
+// ------- Swift Apprentice Book
+
+/***
+ A set is an unordered collection of unique values of the same type.
+ This can be extremely useful when you want to ensure that an item doesn’t
+ appear more than once in your collection and when the order of your items isn’t important.
+*/
+
+let setOne: Set<Int> = [1]
+let someArray = [1, 2, 3, 1]
+var explicitSet: Set<Int> = [1, 2, 3, 1]
+var someSet = Set([1, 2, 3, 1])
+print(someSet)
+// > [2, 3, 1] but the order is not defined
+
+print(someSet.contains(1))  // > true
+print(someSet.contains(4))  // > false
+
+someSet.insert(5)
+let removedElement = someSet.remove(1)
+print(removedElement!)
 
 
 
@@ -179,5 +223,51 @@ for airportName in airports.values {
 
 let airportCodes = [String](airports.keys)
 let airportNames = [String](airports.values)
+
+// ------- Swift Apprentice Book
+
+var namesAndScores = ["Anna": 2, "Brian": 2, "Craig": 8, "Donna": 6]
+print(namesAndScores)
+
+var pairs: [String: Int] = [:]
+pairs.reserveCapacity(20)
+
+print(namesAndScores["Anna"]!) // 2
+print(namesAndScores["Greg"] ?? "nil") // nil
+
+namesAndScores.isEmpty  //  false
+namesAndScores.count    //  4
+
+// Bob wants to join the game :-)
+var bobData = [
+  "name": "Bob",
+  "profession": "Card Player",
+  "country": "USA"
+]
+
+bobData.updateValue("CA", forKey: "state")
+bobData["city"] = "San Francisco"
+
+bobData.removeValue(forKey: "state")
+bobData["city"] = nil
+
+/***
+ If you’re using a dictionary that has values that are optional types,
+ dictionary[key] = nil still removes the key completely.
+ If you want to keep the key and set the value to nil,
+ you must use the updateValue method.
+*/
+
+for (player, score) in namesAndScores {
+  print("\(player) -> \(score)")
+}
+// > Craig - 8
+// > Anna - 2
+// > Donna - 6
+// > Brian - 2
+
+for player in namesAndScores.keys {
+  print("\(player), ", terminator: "") // no newline
+}
 
 //: [Next](@next)
