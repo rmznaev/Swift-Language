@@ -62,27 +62,35 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
 // - Accessing and Modifying a String
 // Each String value has an associated index type, String.Index, which corresponds to the position of each Character in the string.
 
-
-
-// - String indices
-
+// String indices
 let greeting = "Guten Tag!"
+let congratulating = "Congratulations!"
 
 greeting[greeting.startIndex] // G
-
 greeting[greeting.index(before: greeting.endIndex)] // !
-
 greeting[greeting.index(after: greeting.startIndex)] // u
 
+congratulating[congratulating.startIndex] // C
+congratulating[congratulating.index(before: congratulating.endIndex)] // !
+congratulating[congratulating.index(after: congratulating.startIndex)] // o
+
 let index = greeting.index(greeting.startIndex, offsetBy: 7)
+let congratsIndex = congratulating.index(congratulating.startIndex, offsetBy: 3)
 
 greeting[index] // a
+congratulating[congratsIndex] // g
 
 for index in greeting.indices {
     print("\(greeting[index]) ", terminator: "")
 }
 
-// Inserting & Removing
+print("\n")
+
+for index in congratulating.indices {
+    print("\(congratulating[index]) ", terminator: "")
+}
+
+// - Inserting & Removing
 
 var welcome = "hello"
 
@@ -102,15 +110,15 @@ welcome.removeSubrange(range)
 
 
 
-// Substrings
+// - Substrings
 
 let hello = "Hello, world!"
 
 // String index
-let indexx = hello.firstIndex(of: ",") ?? hello.endIndex
+let commaIndex = hello.firstIndex(of: ",") ?? hello.endIndex
 
 // Hello
-let beginning = hello[..<indexx]
+let beginning = hello[..<commaIndex]
 
 // Created new string from hello
 let newString = String(beginning)
