@@ -2,13 +2,25 @@
 
 import Foundation
 
+// - Closures
+
 let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 
 func backward(_ s1: String, _ s2: String) -> Bool {
     return s1 > s2
 }
+var reversedNames = names.sorted(by: backward)
 
-//var reversedNames = names.sorted(by: {  })
+reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in
+    return s1 < s2
+})
+
+reversedNames = names.sorted(by: {s1, s2 in return s1 < s2 })
+reversedNames = names.sorted(by: {s1, s2 in s1 > s2})
+reversedNames = names.sorted(by: { $0 > $1 })
+reversedNames = names.sorted(by: <)
+
+// -------------
 
 let nums = [5, 4, 1, 8, 7, 3]
 
@@ -34,6 +46,15 @@ nums.sorted(by: <)
 
 
 // Trailing Closures
+
+func someFunctionThatTakesAClosure(closure: () -> Void) {
+    // function body goes here
+}
+
+someFunctionThatTakesAClosure {
+    //closure body goes here
+}
+
 let digitNames = [
     0: "Zero", 1: "One", 2: "Two",   3: "Three", 4: "Four",
     5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine"
@@ -51,9 +72,34 @@ let strings = numbers.map { (number) -> String in
     return output
 }
 
+struct Server { }
+struct Picture { }
+
+func loadPicture(
+    from server: Server,
+    completion: (Picture) -> Void,
+    onFailure: () -> Void
+){
+    if let picture = download("photo.jpg", from: server) {
+        completion(picture)
+    } else {
+        onFailure()
+    }
+}
+
+func download(_ photo: String, from: Server) -> Picture? {
+    return Picture()
+}
+
+loadPicture(from: Server()) { picture in
+    // set picture to some place, because it successfully loaded
+} onFailure: {
+    // show some alert, because loading is failed
+    print("Couldn't download the next picture.")
+}
 
 // Capturing Values
-func makeINcrementer(forIncrement amount: Int) -> () -> Int {
+func makeIncrementer(forIncrement amount: Int) -> () -> Int {
     var runningTotal = 0
     func incrementer() -> Int {
         runningTotal += amount
@@ -62,14 +108,14 @@ func makeINcrementer(forIncrement amount: Int) -> () -> Int {
     return incrementer
 }
 
-makeINcrementer(forIncrement: 4)
+makeIncrementer(forIncrement: 4)
 
-let incrementByTen = makeINcrementer(forIncrement: 10)
+let incrementByTen = makeIncrementer(forIncrement: 10)
 incrementByTen() // 10
 incrementByTen() // 20
 incrementByTen() // 30
 
-let incrementBySeven = makeINcrementer(forIncrement: 7)
+let incrementBySeven = makeIncrementer(forIncrement: 7)
 incrementBySeven() // 7
 incrementBySeven() // 14
 incrementBySeven() // 21
