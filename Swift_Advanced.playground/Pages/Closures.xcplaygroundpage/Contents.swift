@@ -166,4 +166,41 @@ func serve(customer customerProvider: @autoclosure () -> String) {
 
 serve(customer: customersLine.remove(at: 0))
 
+
+
+// - More about Escaping Closures...
+// Example one
+
+let makeGreeting: (String) -> String = { name in
+    return "Hello \(name)!"
+}
+
+print(makeGreeting("Rmzn"))
+
+class TaskManager {
+    var onTaskFinished:(() -> Void)?
+
+    func startLengthyTask(completionHandler: @escaping () -> Void) {
+        // Store completion handler for later
+        onTaskFinished = completionHandler
+
+        // Do lengthy task
+        // …
+    }
+
+    func onLengthyTaskFinished() {
+        onTaskFinished?() // Call completion handler
+    }
+}
+
+let task = TaskManager()
+task.startLengthyTask(completionHandler: {
+    // Do this when task has finished…
+})
+
+
+// Example two
+
+
+
 //: [Next](@next)
