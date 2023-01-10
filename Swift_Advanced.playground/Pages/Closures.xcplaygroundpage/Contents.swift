@@ -238,4 +238,28 @@ APICaller().doSomething {
     // closure body goes here
 }
 
+// - More about @autoclosures...
+// - Example one
+
+struct Person: CustomStringConvertible {
+    let name: String
+    
+    var description: String {
+        print("Asking for Person description.")
+        return "Person name is \(name)"
+    }
+}
+
+let isDebuggingEnabled = false
+ 
+func debugLog(_ message: @autoclosure () -> String) {
+    /// You could replace this in projects with #if DEBUG
+    if isDebuggingEnabled {
+        print("[DEBUG] \(message())")
+    }
+}
+
+let person = Person(name: "Bernie")
+debugLog({ person.description }())
+
 //: [Next](@next)
