@@ -262,4 +262,44 @@ func debugLog(_ message: @autoclosure () -> String) {
 let person = Person(name: "Bernie")
 debugLog({ person.description }())
 
+
+// - Swift Apprientice book
+
+var multiplyClosure = { (a: Int, b: Int) -> Int in
+  return a * b
+}
+
+multiplyClosure = { (a: Int, b: Int) -> Int in
+    a * b
+}
+
+multiplyClosure = { (a, b) in
+    a * b
+}
+
+multiplyClosure = {
+    $0 * $1
+}
+
+let result = multiplyClosure(4, 2)
+
+
+func operateOnNumbers(
+    _ a: Int,
+    _ b: Int,
+    operation: (Int, Int) -> Int
+) -> Int {
+  let result = operation(a, b)
+  print(result)
+  return result
+}
+
+let addClosure = { (a: Int, b: Int) in
+  a + b
+}
+
+operateOnNumbers(4, 2, operation: addClosure)
+
+
+
 //: [Next](@next)
