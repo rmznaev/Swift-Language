@@ -283,7 +283,6 @@ multiplyClosure = {
 
 let result = multiplyClosure(4, 2)
 
-
 func operateOnNumbers(
     _ a: Int,
     _ b: Int,
@@ -299,7 +298,5 @@ let addClosure = { (a: Int, b: Int) in
 }
 
 operateOnNumbers(4, 2, operation: addClosure)
-
-
 
 //: [Next](@next)
