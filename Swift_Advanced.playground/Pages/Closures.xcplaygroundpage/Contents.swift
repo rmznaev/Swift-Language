@@ -299,4 +299,21 @@ let addClosure = { (a: Int, b: Int) in
 
 operateOnNumbers(4, 2, operation: addClosure)
 
+func addFunction(_ a: Int, _ b: Int) -> Int {
+  a + b
+}
+
+operateOnNumbers(4, 2, operation: addFunction)
+
+operateOnNumbers(4, 2, operation: { (a: Int, b: Int) -> Int in
+  return a + b
+})
+
+operateOnNumbers(4, 2, operation: { $0 + $1 })
+
+operateOnNumbers(4, 2) {
+  $0 + $1
+}
+
+
 //: [Next](@next)
