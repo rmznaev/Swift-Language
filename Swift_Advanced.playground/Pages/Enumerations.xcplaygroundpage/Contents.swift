@@ -298,4 +298,47 @@ optionalNil == nil    // true
 optionalNil == .none  // true
 
 
+// - Challenges
+
+// 1
+enum CoinAgain: Int {
+    case penny = 1
+    case nickel = 5
+    case dime = 10
+    case quarter = 25
+}
+
+let coinPurse: [CoinAgain] = [
+    .penny, .quarter, .nickel,
+    .dime, .penny, .dime, .quarter
+]
+
+func calculateCoins(coins: [CoinAgain]) -> Int {
+    coins.reduce(0) { $0 + $1.rawValue }
+}
+
+let coinsSum = calculateCoins(coins: coinPurse)
+print(coinsSum)
+
+
+// 2
+enum MonthExercise: Int {
+    case january = 1, february, march,
+         april, may, june, july, august,
+         september, october, november, december
+    
+    var numberOfMonthsUntilSummer: Int {
+        let numberOfSummerMonth = 7
+        
+        if self.rawValue <= 7 {
+            return numberOfSummerMonth - self.rawValue
+        } else {
+            return self.rawValue - numberOfSummerMonth
+        }
+    }
+}
+
+let currentMonth = MonthExercise.january
+currentMonth.numberOfMonthsUntilSummer
+
 //: [Next](@next)
