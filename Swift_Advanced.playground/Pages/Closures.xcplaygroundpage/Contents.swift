@@ -379,6 +379,8 @@ alphabets.sorted {
 // .dropLast()
 // .prefix()
 // .suffix()
+// .removeAll { }
+// .removeAll()
 
 let values = [1, 2, 3, 4, 5, 6]
 values.forEach {
@@ -432,5 +434,37 @@ let stockSum = stock.reduce(0) {
     $0 + $1.key * Double($1.value)
 }
 print(stockSum)
+
+let removeFirst = prices.dropFirst()
+let removeFirstTwo = prices.dropFirst(2)
+
+let removeLast = prices.dropLast()
+let removeLastTwo = prices.dropLast(2)
+
+let firstTwo = prices.prefix(2)
+let lastTwo = prices.suffix(2)
+
+prices.removeAll() { $0 > 2 } // prices is now [1.5]
+prices.removeAll() // prices is now an empty array
+
+
+// Lazy collections
+
+func isPrime(_ number: Int) -> Bool {
+    if number == 1 { return false }
+    if number == 2 || number == 3 { return true }
+
+    for i in 2...Int(Double(number).squareRoot()) {
+        if number % i == 0 { return false }
+    }
+
+    return true
+}
+
+let primes = (1...).lazy
+    .filter { isPrime($0) }
+    .prefix(10)
+primes.forEach { print($0) }
+
 
 //: [Next](@next)
