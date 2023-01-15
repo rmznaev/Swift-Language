@@ -316,4 +316,121 @@ operateOnNumbers(4, 2) {
 }
 
 
+// Closures with no return value
+
+///closure that takes no parameters and returns nothing
+let voidClosure: () -> Void = {
+    print("Swift is awesome!")
+}
+
+voidClosure()
+
+var counter = 0
+let incrementCounter = {
+    counter += 1
+}
+
+incrementCounter()
+incrementCounter()
+incrementCounter()
+incrementCounter()
+incrementCounter()
+
+print(counter)
+
+func countingClosure() -> () -> Int {
+    var counter = 0
+    let incrementCounter: () -> Int = {
+        counter += 1
+        return counter
+    }
+    return incrementCounter
+}
+
+let counterOne = countingClosure()
+let counterTwo = countingClosure()
+
+counterOne()
+counterOne()
+
+counterTwo()
+counterTwo()
+counterTwo()
+
+let alphabets = ["ZZZZZZ", "BB", "A", "CCCC", "EEEEE"]
+alphabets.sorted() // ["A", "BB", "CCCC", "EEEEE", "ZZZZZZ"]
+
+alphabets.sorted {
+    $0.count > $1.count // ["ZZZZZZ", "EEEEE", "CCCC", "BB", "A"]
+}
+
+
+// Functional Programming features :-)
+
+// .forEach { }
+// .filter { }
+// .first { }
+// .map { }
+// .compactMap { }
+// .flatMap { }
+// .reduce { }
+// .reduce(into:_:) { }
+// .dropFirst()
+// .dropLast()
+// .prefix()
+// .suffix()
+
+let values = [1, 2, 3, 4, 5, 6]
+values.forEach {
+    print("\($0): \($0*$0)")
+}
+
+var prices = [1.5, 10, 4.99, 2.30, 8.19]
+
+let largePrices = prices.filter {
+    $0 > 5
+}
+print(largePrices)
+
+let firstLargePrice = prices.first {
+    $0 > 5
+}
+print(firstLargePrice ?? 0.0)
+
+let salePrices = prices.map {
+    $0 * 0.9
+}
+print(salePrices)
+
+let userInput = ["0", "11", "haha", "42"]
+
+let userInputNumbers = userInput.map {
+    Int($0)
+}
+print(userInputNumbers)
+
+let userInputNumbersOnly = userInput.compactMap {
+    Int($0)
+}
+print(userInputNumbersOnly)
+
+let userInputNested = [["0", "1"], ["a", "b", "c"], ["🐕"]]
+
+let allUserInput = userInputNested.flatMap {
+    $0
+}
+print(allUserInput)
+
+let sum = prices.reduce(0) {
+    $0 + $1
+}
+print(sum)
+
+let stock = [1.5: 5, 10: 2, 4.99: 20, 2.30: 5, 8.19: 30]
+
+let stockSum = stock.reduce(0) {
+    $0 + $1.key * Double($1.value)
+}
+print(stockSum)
+
 //: [Next](@next)
