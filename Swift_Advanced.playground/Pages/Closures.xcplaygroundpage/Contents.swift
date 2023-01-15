@@ -467,4 +467,22 @@ let primes = (1...).lazy
 primes.forEach { print($0) }
 
 
+
+// - Challenges
+
+// 1
+let relativeNames = ["Asif", "Nicat", "Fariz", "Kamran"]
+let reducedRelativeNames = relativeNames.reduce([]) {
+    $0 + $1
+}
+print(reducedRelativeNames)
+
+// 2
+let longerThanFourCharRelativeNames = relativeNames.filter {
+    $0.count > 4
+}.reduce([]) {
+    $0 + $1
+}
+print(longerThanFourCharRelativeNames)
+
 //: [Next](@next)
