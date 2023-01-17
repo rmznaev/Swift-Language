@@ -21,6 +21,7 @@
         <page name='Extension'/>
         <page name='Typealias'/>
         <page name='OOP in Swift'/>
+        <page name='Structures'/>
         <page name='Classes (OOP)'/>
         <page name='Convenience Init (OOP)'/>
         <page name='Computed Property (OOP)'/>
