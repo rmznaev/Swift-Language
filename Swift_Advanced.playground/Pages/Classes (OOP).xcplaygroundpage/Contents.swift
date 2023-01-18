@@ -2,6 +2,9 @@
 
 import Foundation
 
+// - Classes
+/// While you’ll often use structures in your apps to represent values, you’ll generally use classes to represent objects.
+
 // UIView is the iOS main UI class, can be considered as a class
 
 class Person {
@@ -149,5 +152,76 @@ let playerTwo = Bowler(name: "Fariz")
 
 let talaTeam = CricketTeam(name: "Tala", team: [playerOne, playerTwo])
 talaTeam.play()
+
+
+
+// - Swift Apprentice Book samples below ⤵️
+
+class Human {
+    var firstName: String
+    var lastName: String
+
+    init(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+
+    var fullName: String {
+        "\(firstName) \(lastName)"
+    }
+}
+
+let john = Human(firstName: "Johnny", lastName: "Appleseed")
+
+
+class SimplePerson {
+    let name: String
+
+    init(name: String) {
+        self.name = name
+    }
+}
+
+var var1 = SimplePerson(name: "John")
+
+
+// Methods and mutability
+
+struct Grade {
+    let letter: String
+    let points: Double
+    let credits: Double
+}
+
+class Student {
+    var firstName: String
+    var lastName: String
+    var credits = 0.0
+    var grades: [Grade] = []
+
+    init(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+
+    func recordGrade(_ grade: Grade) {
+        grades.append(grade)
+        credits += grade.credits
+    }
+}
+
+let jane = Student(firstName: "Jane", lastName: "Appleseed")
+let history = Grade(letter: "B", points: 9.0, credits: 3.0)
+var math = Grade(letter: "A", points: 16.0, credits: 4.0)
+
+jane.recordGrade(history)
+jane.recordGrade(math)
+
+print(jane.credits)
+
+math = Grade(letter: "A", points: 20.0, credits: 5.0)
+jane.recordGrade(math)
+
+print(jane.credits) // 12, not 8!
 
 //: [Next](@next)
