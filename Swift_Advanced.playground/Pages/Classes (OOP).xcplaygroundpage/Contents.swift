@@ -224,4 +224,69 @@ jane.recordGrade(math)
 
 print(jane.credits) // 12, not 8!
 
+
+// ** Challenges **
+
+// - 1
+class User {
+    let name: String
+    var lists = [String: List]()
+
+    init(name: String) {
+        self.name = name
+    }
+
+    func addList(_ list: List) {
+        lists[list.name] = list
+    }
+
+    func list(forName name: String) -> List? {
+        lists[name]
+    }
+}
+
+class List {
+    let name: String
+    let users: [User]
+    var movies: [String] = []
+
+    init(name: String, for users: [User]) {
+        self.name = name
+        self.users = users
+    }
+
+    func printMovies(for user: User) {
+        print("\(user.name)'s movie List: \(name)")
+        for movie in movies {
+            print(movie)
+        }
+        print("\n")
+    }
+}
+
+var sahil = User(name: "Sahil")
+var elmin = User(name: "Elmin")
+let listName = "Action"
+var actionList = List(name: listName, for: [sahil, elmin])
+
+sahil.addList(actionList)
+elmin.addList(actionList)
+
+// Add Sahil's favorites
+sahil.lists[listName]?.movies.append("Rambo")
+sahil.lists[listName]?.movies.append("Terminator")
+
+// Add Elmin's favorites
+elmin.lists[listName]?.movies.append("Die Hard")
+
+// See Sahil's list:
+sahil.lists[listName]?.printMovies(for: sahil)
+
+// See Elmin's list:
+elmin.lists[listName]?.printMovies(for: elmin)
+
+/// If we change User and List classes to struct, we will face different print values,
+/// because of reference and value type differences. -_[-_-]_-
+
+
 //: [Next](@next)
