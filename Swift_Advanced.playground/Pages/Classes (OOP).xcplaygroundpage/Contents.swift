@@ -289,4 +289,57 @@ elmin.lists[listName]?.printMovies(for: elmin)
 /// because of reference and value type differences. -_[-_-]_-
 
 
+// - 2
+struct TShirt {
+    let size: Double
+    let color: String
+    let price: Double
+    let image: String?
+}
+
+struct Address {
+    let name: String
+    let street: String
+    let city: String
+    let zipCode: String
+}
+
+class TShirtStoreUser {
+    let name: String
+    let email: String
+    let shoppingCart: ShoppingCart
+    
+    init(
+        name: String,
+        email: String,
+        shoppingCart: ShoppingCart
+    ) {
+        self.name = name
+        self.email = email
+        self.shoppingCart = shoppingCart
+    }
+}
+
+class ShoppingCart {
+    let user: TShirtStoreUser
+    let tShirt: TShirt
+    let address: Address
+
+    init(
+        user: TShirtStoreUser,
+        tShirt: TShirt,
+        address: Address
+    ) {
+        self.user = user
+        self.tShirt = tShirt
+        self.address = address
+    }
+
+    func calculateTotalCost() -> Double {
+        tShirt.price
+    }
+}
+
+
+
 //: [Next](@next)
