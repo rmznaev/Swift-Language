@@ -340,6 +340,4 @@ class ShoppingCart {
     }
 }
 
-
-
 //: [Next](@next)
