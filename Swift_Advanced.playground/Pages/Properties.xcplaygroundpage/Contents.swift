@@ -73,5 +73,17 @@ square.center = Point(x: 15.0, y: 15.0)
 print("square.origin is now at (\(square.origin.x), \(square.origin.y))") /// Prints "square.origin is now at (10.0, 10.0)"
 
 
+// Read-Only Computed Properties
+struct Cuboid {
+    var width = 0.0, height = 0.0, depth = 0.0
+    var volume: Double {
+        return width * height * depth
+    }
+}
+
+let fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
+print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)") /// Prints "the volume of fourByFiveByTwo is 40.0"
+
+
 
 //: [Next](@next)
