@@ -143,4 +143,30 @@ if player.tracker.advance(to: 6) {
 
 print("Second player: \(player.playerName)")
 
+
+// - Swift Apprentice book
+struct SimpleDate {
+    var month: String
+
+    func monthsUntilWinterBreak(from date: SimpleDate) -> Int {
+        months.firstIndex(of: "December")! -
+        months.firstIndex(of: date.month)!
+    }
+}
+
+let date = SimpleDate(month: "October")
+date.monthsUntilWinterBreak(from: date) // 2
+
+
+// Type methods
+struct Math {
+    static func factorial(of number: Int) -> Int {
+        (1...number).reduce(1, *)
+    }
+}
+
+Math.factorial(of: 6) // 720
+
+
+
 //: [Next](@next)
