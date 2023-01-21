@@ -283,4 +283,48 @@ struct SizedRectangle {
     }
 }
 
+
+// - Swift Apprentice book
+
+//Stored Properties
+struct Contact {
+    var fullName: String
+    let emailAddress: String
+    var relationship = "Friend"
+}
+
+var person = Contact(
+    fullName: "Ramazan Abdullayev",
+    emailAddress: "ramazan.aev@gmail.com"
+)
+
+print(person.fullName)
+print(person.emailAddress)
+
+/// You can assign values to properties as long as both the property and the structure containing the property must be declared with var instead of let
+person.fullName = "Ramazan Abdulla"
+print(person.fullName)
+
+
+// Computed properties
+struct TV {
+    var height: Double
+    var width: Double
+
+    // 1
+    var diagonal: Int {
+        // 2
+        let result = (height * height + width * width).squareRoot().rounded()
+        // 3
+        return Int(result)
+    }
+}
+
+var tv = TV(height: 53.93, width: 95.87)
+print(tv.diagonal) // 110
+
+tv.width = tv.height
+print(tv.diagonal) // 76
+
+
 //: [Next](@next)
