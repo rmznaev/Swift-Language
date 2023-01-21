@@ -18,6 +18,7 @@
         <page name='Subscripts'/>
         <page name='Class vs Struct'/>
         <page name='Properties'/>
+        <page name='Methods'/>
         <page name='Set &amp; Tuple'/>
         <page name='Extension'/>
         <page name='Typealias'/>
@@ -45,6 +46,6 @@
         <page name='Data Source Pattern'/>
         <page name='Initialization Part I'/>
         <page name='Initialization Part II'/>
-        <page name='Methods'/>
+        <page name='Inheritance'/>
     </pages>
 </playground>
