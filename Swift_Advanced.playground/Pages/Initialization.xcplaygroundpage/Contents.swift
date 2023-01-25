@@ -246,9 +246,9 @@ if let giraffe = someCreature {
 
 class Document {
     var name: String?
-    
+
     init() {}
-    
+
     init?(name: String) {
         if name.isEmpty { return nil }
         self.name = name
