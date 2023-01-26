@@ -95,4 +95,23 @@ func afterClassActivity(for student: BandMember) -> String {
 afterClassActivity(for: oboePlayer) // Goes to practice!
 afterClassActivity(for: oboePlayer as Student) // Goes home!
 
+
+// Inheritance, methods and overrides
+
+class StudentAthlete: Student {
+    var failedClasses: [Grade] = []
+
+    override func recordGrade(_ grade: Grade) {
+        var newFailedClasses: [Grade] = []
+        for grade in grades {
+            if grade.letter == "F" {
+                newFailedClasses.append(grade)
+            }
+        }
+        failedClasses = newFailedClasses
+
+        super.recordGrade(grade)
+    }
+}
+
 //: [Next](@next)
