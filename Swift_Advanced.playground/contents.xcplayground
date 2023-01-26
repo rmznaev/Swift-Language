@@ -27,6 +27,7 @@
         <page name='OOP in Swift'/>
         <page name='Structures'/>
         <page name='Classes (OOP)'/>
+        <page name='Advanced Classes'/>
         <page name='Convenience Init (OOP)'/>
         <page name='Computed Property (OOP)'/>
         <page name='Property Observer (OOP)'/>
@@ -48,6 +49,5 @@
         <page name='Data Source Pattern'/>
         <page name='Initialization Part I'/>
         <page name='Initialization Part II'/>
-        <page name='Advanced Classes'/>
     </pages>
 </playground>
