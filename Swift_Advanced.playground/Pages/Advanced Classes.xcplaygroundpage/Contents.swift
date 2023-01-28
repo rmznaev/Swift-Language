@@ -156,4 +156,32 @@ class Team {
     }
 }
 
+
+// Shared base classes
+/// A button that can be pressed.
+class Button {
+    func press() {}
+}
+
+/// An image that can be rendered on a button
+class Image {}
+
+/// A button that is composed entirely of an image.
+class ImageButton: Button {
+    var image: Image
+
+    init(image: Image) {
+        self.image = image
+    }
+}
+
+/// A button that renders as text.
+class TextButton: Button {
+    var text: String
+
+    init(text: String) {
+        self.text = text
+    }
+}
+
 //: [Next](@next)
