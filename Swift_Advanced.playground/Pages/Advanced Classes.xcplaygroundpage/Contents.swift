@@ -18,6 +18,10 @@ class Person {
         self.firstName = firstName
         self.lastName = lastName
     }
+    
+    deinit {
+        print("\(firstName) \(lastName) is being removed from memory!")
+    }
 }
 
 class Student: Person {
@@ -183,5 +187,23 @@ class TextButton: Button {
         self.text = text
     }
 }
+
+
+// Automatic Reference Counting - ARC
+var someone = Person(firstName: "Johnny", lastName: "Appleseed")
+/// Person object has a reference count of 1 (someone variable)
+
+var anotherSomeone: Person? = someone
+/// Reference count 2 (someone, anotherSomeone)
+
+var lotsOfPeople = [someone, someone, anotherSomeone, someone]
+/// Reference count 6 (someone, anotherSomeone, 4 references in lotsOfPeople)
+
+anotherSomeone = nil
+/// Reference count 5 (someone, 4 references in lotsOfPeople)
+
+lotsOfPeople = []
+/// Reference count 1 (someone)
+
 
 //: [Next](@next)
