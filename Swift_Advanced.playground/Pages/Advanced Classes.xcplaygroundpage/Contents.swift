@@ -97,9 +97,15 @@ afterClassActivity(for: oboePlayer as Student) // Goes home!
 
 
 // Inheritance, methods and overrides
-
 class StudentAthlete: Student {
+    var sports: [String]
+    var isEligible: Bool = false
     var failedClasses: [Grade] = []
+    
+    init(sports: [String], firstName: String, lastName: String) {
+        self.sports = sports
+        super.init(firstName: firstName, lastName: lastName)
+    }
 
     override func recordGrade(_ grade: Grade) {
         var newFailedClasses: [Grade] = []
@@ -111,6 +117,42 @@ class StudentAthlete: Student {
         failedClasses = newFailedClasses
 
         super.recordGrade(grade)
+    }
+}
+
+
+// Required and convenience initializers
+class StudentAgain {
+  let firstName: String
+  let lastName: String
+  var grades: [Grade] = []
+
+  init(firstName: String, lastName: String) {
+    self.firstName = firstName
+    self.lastName = lastName
+  }
+
+  init(transfer: StudentAgain) {
+    self.firstName = transfer.firstName
+    self.lastName = transfer.lastName
+  }
+
+  func recordGrade(_ grade: Grade) {
+    grades.append(grade)
+  }
+}
+
+
+class Team {
+    var players: [StudentAthlete] = []
+
+    var isEligible: Bool {
+    for player in players {
+        if !player.isEligible {
+            return false
+        }
+    }
+    return true
     }
 }
 
