@@ -100,7 +100,7 @@ enum VendingMachineError: Error {
     case outOfStock
 }
 
-throw VendingMachineError.insufficientFunds(coinsNeeded: 7)
+//throw VendingMachineError.insufficientFunds(coinsNeeded: 7)
 
 
 // Propagating Errors Using Throwing Functions
@@ -164,7 +164,7 @@ struct PurchasedSnack {
 
 // Handling Errors Using Do-Catch
 var vendingMachine = VendingMachine()
-vendingMachine.coinsDeposited = 8
+//vendingMachine.coinsDeposited = 8
 
 do {
     try buyFavoriteSnack(person: "Amrah", vendingMachine: vendingMachine)
@@ -231,5 +231,36 @@ func fetchData() -> Data? {
     if let data = try? fetchDataFromServer() { return data }
     return nil
 }
+
+
+// - Swift Apprentice book
+
+
+// Failable initializers
+let value = Int("3")          /// Optional(3)
+let failedValue = Int("nope") /// nil
+
+enum PetFood: String {
+    case kibble, canned
+}
+
+let morning = PetFood(rawValue: "kibble")  /// Optional(.kibble)
+let snack = PetFood(rawValue: "fuuud!")    /// nil
+
+struct PetHouse {
+    let squareFeet: Int
+
+    init?(squareFeet: Int) {
+        guard squareFeet >= 1 else { return nil }
+        self.squareFeet = squareFeet
+    }
+}
+
+let tooSmall = PetHouse(squareFeet: 0) /// nil
+let house = PetHouse(squareFeet: 1)    /// Optional(Pethouse)
+
+
+
+
 
 //: [Next](@next)
