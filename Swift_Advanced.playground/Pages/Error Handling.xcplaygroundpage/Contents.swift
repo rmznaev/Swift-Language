@@ -208,4 +208,28 @@ func eat(item: String) throws {
     }
 }
 
+
+// Converting Errors to Optional Values
+func someThrowingFunction() throws -> Int {
+    5
+}
+
+let x = try? someThrowingFunction()
+
+let y: Int?
+do {
+    y = try someThrowingFunction()
+} catch {
+    y = nil
+}
+
+func fetchDataFromDisk() throws -> Data? { Data() }
+func fetchDataFromServer() throws -> Data? { nil }
+
+func fetchData() -> Data? {
+    if let data = try? fetchDataFromDisk() { return data }
+    if let data = try? fetchDataFromServer() { return data }
+    return nil
+}
+
 //: [Next](@next)
