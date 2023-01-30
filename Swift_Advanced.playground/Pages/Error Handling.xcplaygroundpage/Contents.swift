@@ -442,4 +442,182 @@ try! bakery.orderPastry(item: "Cookie",
                         amountRequested: 1,
                         flavor: "ChocolateChip")
 
+
+// - Advanced Error Handling
+enum Direction {
+    case left, right, forward
+}
+
+enum PugBotError: Error {
+    case invalidMove(found: Direction, expected: Direction)
+    case endOfPath
+}
+
+class PugBot {
+    let name: String
+    let correctPath: [Direction]
+    private var currentSpeedInPath = 0
+
+    init(name: String, correctPath: [Direction]) {
+        self.name = name
+        self.correctPath = correctPath
+    }
+
+    func move(_ direction: Direction) throws {
+        guard currentSpeedInPath < correctPath.count else {
+            throw PugBotError.endOfPath
+        }
+
+        let nextDirection = correctPath[currentSpeedInPath]
+        guard nextDirection == direction else {
+            throw PugBotError.invalidMove(
+                found: direction,
+                expected: nextDirection
+            )
+        }
+
+        currentSpeedInPath += 1
+    }
+
+    func reset() {
+        currentSpeedInPath = 0
+    }
+}
+
+let pug = PugBot(
+    name: "Pug",
+    correctPath: [.forward, .left, .forward, .right]
+)
+
+func goHome() throws {
+    try pug.move(.forward)
+    try pug.move(.left)
+    try pug.move(.forward)
+    try pug.move(.right)
+}
+
+do {
+    try goHome()
+} catch {
+    print("PugBot failed to get home.")
+}
+
+func moveSafely(_ movement: () throws -> ()) -> String {
+    do {
+        try movement()
+        return "Completed operation successfully."
+    } catch PugBotError.invalidMove(let found, let expected) {
+        return "The PugBot was supposed to move \(expected), but moved \(found) instead."
+    } catch PugBotError.endOfPath {
+        return "The PugBot tried to move past the end of the path."
+    } catch {
+        return "An unknown error occurred."
+    }
+}
+
+pug.reset()
+moveSafely(goHome)
+
+pug.reset()
+moveSafely {
+    try pug.move(.forward)
+    try pug.move(.left)
+    try pug.move(.forward)
+    try pug.move(.right)
+}
+
+// Rethrows
+func perform(times: Int, movement: () throws -> ()) rethrows {
+    for _ in 1...times {
+        try movement()
+    }
+}
+
+// Throwable properties
+enum EmployeeError: Error {
+    case noName, noAge, noData
+}
+
+class Employee {
+    var name: String
+    var age: Int
+
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+extension Employee {
+    var data: String {
+        get throws {
+            guard !name.isEmpty else { throw EmployeeError.noName }
+            guard age > 0 else { throw EmployeeError.noAge }
+            return "\(name) is \(age) years old."
+        }
+    }
+}
+
+let me = Employee(name: "Ramazan", age: 28)
+
+me.name = ""
+do {
+    try me.data
+} catch {
+    print(error) // "noName"
+}
+
+me.age = -36
+do {
+    try me.data
+} catch {
+    print(error) // "noName"
+}
+
+me.name = "Cosmin"
+do {
+    try me.data
+} catch {
+    print(error) // "noAge"
+}
+
+me.age = 36
+do {
+    try me.data // "Cosmin is 36 years old."
+} catch {
+    print(error)
+}
+
+
+// Throwable subscripts
+extension Employee {
+    subscript(key: String) -> String {
+        get throws {
+            switch key {
+                case "name": return name
+                case "age": return "\(age)"
+                default: throw EmployeeError.noData
+            }
+        }
+    }
+}
+
+do {
+    try me["name"] // "Cosmin"
+} catch {
+    print(error)
+}
+
+do {
+    try me["age"] // "36"
+} catch {
+    print(error)
+}
+
+do {
+    try me["gender"]
+} catch {
+    print(error) // "noData"
+}
+
 //: [Next](@next)
