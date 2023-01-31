@@ -72,7 +72,7 @@ struct Domain: Decodable {
 func fetchDomains() async throws -> [Domain] {
     let url = URL(string: "https://api.raywenderlich.com/api/domains")!
     let (data, _) = try await URLSession.shared.data(from: url)
-    
+
     return try JSONDecoder().decode(Domains.self, from: data).data
 }
 
@@ -87,6 +87,42 @@ Task {
     } catch {
         print(error)
     }
+}
+
+
+// Asynchronous sequences
+func findTitle(url: URL) async throws -> String? {
+    for try await line in url.lines {
+        if line.contains("<title>") {
+            return line.trimmingCharacters(in: .whitespaces)
+        }
+    }
+    return nil
+}
+
+Task {
+    if let title = try await findTitle(url: URL(string: "https://www.raywenderlich.com")!) {
+        print(title)
+    }
+}
+
+
+// Ordering a concurrency
+func findTitlesSerial(first: URL, second: URL) async throws -> (String?, String?) {
+    let title1 = try await findTitle(url: first)
+    let title2 = try await findTitle(url: second)
+
+    return (title1, title2)
+}
+
+
+/// asynchronous bindings
+func findTitlesParallel(first: URL, second: URL) async throws -> (String?, String?) {
+    async let title1 = findTitle(url: first)
+    async let title2 = findTitle(url: second)
+    let titles = try await [title1, title2]
+
+    return (titles[0], titles[1])
 }
 
 //: [Next](@next)
