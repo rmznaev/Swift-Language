@@ -125,4 +125,41 @@ func findTitlesParallel(first: URL, second: URL) async throws -> (String?, Strin
     return (titles[0], titles[1])
 }
 
+
+// Asynchronous properties and subscripts
+
+/// async property
+extension Domains {
+    static var domains: [Domain] {
+        get async throws {
+            try await fetchDomains()
+        }
+    }
+}
+
+Task {
+    dump(try await Domains.domains)
+}
+
+/// async subscript
+extension Domains {
+    enum Error: Swift.Error { case outOfRange }
+
+    static subscript(_ index: Int) -> String {
+        get async throws {
+            let domains = try await Self.domains
+            guard domains.indices.contains(index) else {
+                throw Error.outOfRange
+            }
+            return domains[index].attributes.name
+        }
+    }
+}
+
+Task {
+    dump(try await Domains[4]) /// "Unity", as of this writing
+}
+
+
+
 //: [Next](@next)
