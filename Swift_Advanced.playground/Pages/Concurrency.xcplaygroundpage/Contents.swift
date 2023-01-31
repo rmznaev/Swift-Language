@@ -161,5 +161,59 @@ Task {
 }
 
 
+// - Actors
+actor Playlist {
+    let title: String
+    let author: String
+    private(set) var songs: [String]
+
+    init(title: String, author: String, songs: [String]) {
+        self.title = title
+        self.author = author
+        self.songs = songs
+    }
+
+    func add(song: String) {
+        songs.append(song)
+    }
+
+    func remove(song: String) {
+        guard !songs.isEmpty, let index = songs.firstIndex(of: song) else { return }
+        songs.remove(at: index)
+    }
+
+    func move(song: String, from playlist: Playlist) async {
+        await playlist.remove(song: song)
+        add(song: song)
+    }
+
+    func move(song: String, to playlist: Playlist) async {
+        await playlist.add(song: song)
+        remove(song: song)
+    }
+}
+
+let favorites = Playlist(title: "Favorite songs",
+                         author: "Cosmin",
+                         songs: ["Nothing else matters"])
+let partyPlaylist = Playlist(title: "Party songs",
+                             author: "Ray",
+                             songs: ["Stairway to heaven"])
+
+Task {
+    await favorites.move(song: "Stairway to heaven", from: partyPlaylist)
+    await favorites.move(song: "Nothing else matters", to: partyPlaylist)
+    await print(favorites.songs)
+}
+
+
+// Using the nonisolated keyword
+extension Playlist: CustomStringConvertible {
+    /// The nonisolated keyword makes this property synchronous
+    /// by disabling the actor’s synchronization features. This is called actor isolation.
+    nonisolated var description: String {
+        "\(title) by \(author)."
+    }
+}
 
 //: [Next](@next)
