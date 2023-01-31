@@ -52,4 +52,41 @@ func helloPauseGoodbye() async throws {
     print("Goodbye")
 }
 
+
+// Decoding an API — learning domains
+struct Domains: Decodable {
+  let data: [Domain]
+}
+
+struct Attributes: Decodable {
+    let name: String
+    let description: String
+    let level: String
+}
+
+struct Domain: Decodable {
+    let attributes: Attributes
+}
+
+// Async/await in action
+func fetchDomains() async throws -> [Domain] {
+    let url = URL(string: "https://api.raywenderlich.com/api/domains")!
+    let (data, _) = try await URLSession.shared.data(from: url)
+    
+    return try JSONDecoder().decode(Domains.self, from: data).data
+}
+
+Task {
+    do {
+        let domains = try await fetchDomains()
+        
+        for domain in domains {
+            let attribute = domain.attributes
+            print("\(attribute.name): \(attribute.description) - \(attribute.level)")
+        }
+    } catch {
+        print(error)
+    }
+}
+
 //: [Next](@next)
