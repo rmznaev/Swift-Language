@@ -73,7 +73,7 @@ class Course {
 
 // Handle with Error (3/3)
 do {
-    let myCourse = try Course(name: "Learn Swift with Rmzn")
+    _ = try Course(name: "Learn Swift with Rmzn")
 } catch NameError.noName {
     print("Make sure enter your name please!")
 }

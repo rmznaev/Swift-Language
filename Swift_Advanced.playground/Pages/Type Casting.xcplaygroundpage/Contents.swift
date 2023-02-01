@@ -97,12 +97,11 @@ for component in UIComponents {
         print(label)
         // Code here
     }
-    
-    if let view = component as? UIView {
-        view.backgroundColor = .blue
-        // Code here
-    }
+
+    let view = component as UIView
+    view.backgroundColor = .blue
 }
+
 
 //: Type Casting in UIKit
 //let storyboard = UIStoryboard(name: "Main", bundle: nil)
