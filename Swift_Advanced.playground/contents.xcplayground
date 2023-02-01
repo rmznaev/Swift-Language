@@ -50,5 +50,6 @@
         <page name='Initialization Part I'/>
         <page name='Initialization Part II'/>
         <page name='Concurrency'/>
+        <page name='Nested Type'/>
     </pages>
 </playground>
