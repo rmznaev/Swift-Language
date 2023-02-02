@@ -5,6 +5,7 @@
         <page name='Operators'/>
         <page name='Strings &amp; Characters'/>
         <page name='Collection Types'/>
+        <page name='Set &amp; Tuple'/>
         <page name='Control Flow'/>
         <page name='Functions'/>
         <page name='Closures'/>
@@ -22,8 +23,8 @@
         <page name='Methods'/>
         <page name='Inheritance'/>
         <page name='Initialization'/>
-        <page name='Set &amp; Tuple'/>
         <page name='Extension'/>
+        <page name='Intro to Protocols'/>
         <page name='Typealias'/>
         <page name='OOP in Swift'/>
         <page name='Structures'/>
@@ -43,7 +44,6 @@
         <page name='Capture Lists'/>
         <page name='Trailing Closures'/>
         <page name='Completion Handlers'/>
-        <page name='Intro to Protocols'/>
         <page name='Protocol Extension'/>
         <page name='Protocol as Type'/>
         <page name='Delegate Pattern'/>
@@ -51,5 +51,6 @@
         <page name='Initialization Part I'/>
         <page name='Initialization Part II'/>
         <page name='Concurrency'/>
+        <page name='Protocols'/>
     </pages>
 </playground>
