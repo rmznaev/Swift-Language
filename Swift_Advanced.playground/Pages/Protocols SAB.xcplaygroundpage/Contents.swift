@@ -73,4 +73,11 @@ let account = accountType.init(initialAmount: 30.00)
 let transferAccount = accountType.init(transferAccount: account)!
 
 
+// Protocol inheritance
+protocol WheeledVehicle: Vehicle {
+    var numberOfWheels: Int { get }
+    var wheelSize: Int { get set }
+}
+
+
 //: [Next](@next)
