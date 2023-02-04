@@ -76,7 +76,49 @@ let transferAccount = accountType.init(transferAccount: account)!
 // Protocol inheritance
 protocol WheeledVehicle: Vehicle {
     var numberOfWheels: Int { get }
-    var wheelSize: Int { get set }
+    var wheelSize: Double { get set }
+}
+
+// Implementing protocols
+class Bike: WheeledVehicle {
+    var numberOfWheels = 2
+    var wheelSize = 16.0
+    
+    var peddling = false
+    var brakesApplied = false
+
+    func accelerate() {
+        peddling = true
+        brakesApplied = false
+    }
+    
+    func stop() {
+        peddling = false
+        brakesApplied = true
+    }
+}
+
+
+// Associated types in protocols
+protocol WeightCalculatable {
+    associatedtype WeightType
+    var weight: WeightType { get }
+}
+
+class HeavyThing: WeightCalculatable {
+    typealias WeightType = Int
+    
+    var weight: Int {
+        100
+    }
+}
+
+class LightThing: WeightCalculatable {
+    typealias WeightType = Double
+
+    var weight: Double {
+        0.0025
+    }
 }
 
 
