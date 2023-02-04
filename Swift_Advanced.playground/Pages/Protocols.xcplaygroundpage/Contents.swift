@@ -59,10 +59,10 @@ class LinearCongruentialGenerator: RandomNumberGenerator {
     }
 }
 
-let generator = LinearCongruentialGenerator()
-print("Here's a random number: \(generator.random())")
+let generatorOne = LinearCongruentialGenerator()
+print("Here's a random number: \(generatorOne.random())")
 /// Prints "Here's a random number: 0.3746499199817101"
-print("And another one: \(generator.random())")
+print("And another one: \(generatorOne.random())")
 /// Prints "And another one: 0.729023776863283"
    
 
@@ -486,5 +486,49 @@ for _ in 1...5 {
 /// -1
 /// 0
 /// 0
+
+
+// Protocol Extensions
+extension RandomNumberGenerator {
+    func randomBool() -> Bool {
+        return random() > 0.5
+    }
+}
+
+let generatorTwo = LinearCongruentialGenerator()
+print("Here's a random number: \(generatorTwo.random())")
+/// Prints "Here's a random number: 0.3746499199817101"
+print("And here's a random Boolean: \(generatorTwo.randomBool())")
+/// Prints "And here's a random Boolean: true"
+
+
+// Providing Default Implementations
+extension PrettyTextRepresentable  {
+    var prettyTextualDescription: String {
+        return textualDescription
+    }
+}
+
+
+// Adding Constraints to Protocol Extensions
+extension Collection where Element: Equatable {
+    func allEqual() -> Bool {
+        for element in self {
+            if element != self.first {
+                return false
+            }
+        }
+        return true
+    }
+}
+
+let equalNumbers = [100, 100, 100, 100, 100]
+let differentNumbers = [100, 100, 200, 100, 200]
+
+print(equalNumbers.allEqual())
+/// Prints "true"
+print(differentNumbers.allEqual())
+/// Prints "false"
+
 
 //: [Next](@next)
