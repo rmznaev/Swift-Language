@@ -51,6 +51,7 @@
         <page name='Initialization Part I'/>
         <page name='Initialization Part II'/>
         <page name='Concurrency'/>
-        <page name='Protocols'/>
+        <page name='Protocols SLG'/>
+        <page name='Protocols SAB'/>
     </pages>
 </playground>
