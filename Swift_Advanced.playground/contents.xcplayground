@@ -16,7 +16,8 @@
         <page name='Error Handling'/>
         <page name='Type Casting'/>
         <page name='Nested Types'/>
-        <page name='Generics'/>
+        <page name='Generics SLG'/>
+        <page name='Generics SAB'/>
         <page name='Subscripts'/>
         <page name='Class vs Struct'/>
         <page name='Properties'/>
@@ -25,6 +26,8 @@
         <page name='Initialization'/>
         <page name='Extension'/>
         <page name='Intro to Protocols'/>
+        <page name='Protocols SLG'/>
+        <page name='Protocols SAB'/>
         <page name='Typealias'/>
         <page name='OOP in Swift'/>
         <page name='Structures'/>
@@ -51,7 +54,5 @@
         <page name='Initialization Part I'/>
         <page name='Initialization Part II'/>
         <page name='Concurrency'/>
-        <page name='Protocols SLG'/>
-        <page name='Protocols SAB'/>
     </pages>
 </playground>
