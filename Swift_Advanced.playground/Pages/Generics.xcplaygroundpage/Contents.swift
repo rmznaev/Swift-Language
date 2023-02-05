@@ -301,4 +301,56 @@ extension IntStackAgain: SuffixableContainer {
     // Inferred that Suffix is Stack<Int>.
 }
 
+
+// Generic Where Clauses
+func allItemsMatch<C1: Container, C2: Container>
+    (_ someContainer: C1, _ anotherContainer: C2) -> Bool
+    where C1.Item == C2.Item, C1.Item: Equatable {
+        /// Check that both containers contain the same number of items.
+        if someContainer.count != anotherContainer.count {
+            return false
+        }
+
+        /// Check each pair of items to see if they're equivalent.
+        for i in 0..<someContainer.count {
+            if someContainer[i] != anotherContainer[i] {
+                return false
+            }
+        }
+
+        /// All items match, so return true.
+        return true
+}
+
+var stackOfString = StackAgain<String>()
+stackOfString.push("uno")
+stackOfString.push("dos")
+stackOfString.push("tres")
+
+var arrayOfStrings = ["uno", "dos", "tres"]
+
+if allItemsMatch(stackOfString, arrayOfStrings) {
+    print("All items match.")
+} else {
+    print("Not all items match.")
+}
+/// Prints "All items match."
+
+
+// Extensions with a Generic Where Clause
+extension Stack where Element: Equatable {
+    func isTop(_ item: Element) -> Bool {
+        guard let topItem = items.last else { return false }
+        return topItem == item
+    }
+}
+
+if stackOfStrings.isTop("tres") {
+    print("Top element is tres.")
+} else {
+    print("Top element is something else.")
+}
+/// Prints "Top element is tres."
+
+
 //: [Next](@next)
